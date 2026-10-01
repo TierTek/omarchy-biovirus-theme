@@ -20,7 +20,8 @@ the plates with `omarchy theme bg next`.
 
 | File | Themes |
 |---|---|
-| `colors.toml` | The palette. Everything Omarchy generates (terminals, Hyprland borders, btop, the shell) comes from here. |
+| `colors.toml` | The palette. Everything Omarchy generates (terminals, Hyprland borders, the shell) comes from here. |
+| `btop.theme` | A hand-tuned btop palette: green gauges shading to amber and red as load climbs, used instead of the generated one. |
 | `backgrounds/` | Five 2880×1800 plates: containment, virions, mitosis, sequencer, outbreak. |
 | `shell.*.toml` | Lock, launcher, menu and notification styling for the Omarchy shell. |
 | `icons.theme` | Icon theme name. |

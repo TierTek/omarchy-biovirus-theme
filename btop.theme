@@ -1,0 +1,64 @@
+# BioVirus btop theme (2026-09-30). Ships with the theme, so Omarchy uses it
+# instead of generating one from btop.theme.tpl. Load meters read like the
+# containment levels: green when calm, amber under load, red near the limit.
+# Things that are good to have (free, available, cached) stay green/cyan.
+
+theme[main_bg]="#04080a"
+theme[main_fg]="#d6f5e6"
+theme[title]="#7dffbe"
+theme[hi_fg]="#4bffa5"
+theme[selected_bg]="#12402e"
+theme[selected_fg]="#4bffa5"
+theme[inactive_fg]="#2e8f63"
+theme[graph_text]="#b6e8d0"
+theme[meter_bg]="#0b1a14"
+theme[proc_misc]="#b6e8d0"
+
+# Every box outline in the accent, like the HUD frames; dividers muted.
+theme[cpu_box]="#4bffa5"
+theme[mem_box]="#4bffa5"
+theme[net_box]="#4bffa5"
+theme[proc_box]="#4bffa5"
+theme[div_line]="#2e8f63"
+
+# Load: calm -> strained -> breach.
+theme[temp_start]="#4bffa5"
+theme[temp_mid]="#ffc061"
+theme[temp_end]="#ff4d5e"
+theme[cpu_start]="#4bffa5"
+theme[cpu_mid]="#ffc061"
+theme[cpu_end]="#ff4d5e"
+theme[used_start]="#4bffa5"
+theme[used_mid]="#ffc061"
+theme[used_end]="#ff4d5e"
+theme[process_start]="#4bffa5"
+theme[process_mid]="#ffc061"
+theme[process_end]="#ff4d5e"
+
+# Headroom: always reassuring.
+theme[free_start]="#2e8f63"
+theme[free_mid]="#4bffa5"
+theme[free_end]="#7dffbe"
+theme[cached_start]="#12402e"
+theme[cached_mid]="#2e8f63"
+theme[cached_end]="#4be0ff"
+theme[available_start]="#2e8f63"
+theme[available_mid]="#4bffa5"
+theme[available_end]="#7dffbe"
+
+# Network: download green, upload cyan.
+theme[download_start]="#2e8f63"
+theme[download_mid]="#4bffa5"
+theme[download_end]="#7dffbe"
+theme[upload_start]="#12402e"
+theme[upload_mid]="#4be0ff"
+theme[upload_end]="#7de9ff"
+
+theme[gradient_color_0]="#04080a"
+theme[gradient_color_1]="#0b1a14"
+theme[gradient_color_2]="#12402e"
+theme[gradient_color_3]="#2e8f63"
+theme[gradient_color_4]="#63a186"
+theme[gradient_color_5]="#d6f5e6"
+theme[gradient_color_6]="#b6e8d0"
+theme[gradient_color_7]="#eafff5"
