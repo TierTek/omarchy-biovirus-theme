@@ -27,10 +27,39 @@ the plates with `omarchy theme bg next`.
 | `icons.theme` | Icon theme name. |
 | `unlock.png`, `preview*.png` | Lock-screen mark and gallery previews. |
 | `neovim.lua`, `vscode.json` | Editor colourschemes. See the note below. |
+| `terminal/kitty-tint.*` | Optional random background tint per kitty window. See below. |
 
 `tools/make-plates.py` is the generator for the plates (Pillow only). Pass it
 another theme's `colors.toml` with `--colors` to render the same five plates
 in a sibling palette.
+
+## Optional: a random tint for each kitty window
+
+`terminal/` holds a small opt-in script that opens each new kitty window with its
+background faintly shaded (12%) toward a random accent of the active theme —
+green in one window, amber or violet in the next. It is set with an OSC 11
+escape, so only that window changes and transparency is untouched, and it reads
+the current theme at startup, so it keeps working after `omarchy theme set`
+(with any theme, not just this one). It skips SSH sessions, tmux and nested
+shells.
+
+A theme cannot run code, so turn it on yourself. bash or zsh — add to
+`~/.bashrc` or `~/.zshrc`:
+
+```bash
+[ -r ~/.config/omarchy/themes/biovirus/terminal/kitty-tint.sh ] && . ~/.config/omarchy/themes/biovirus/terminal/kitty-tint.sh
+```
+
+fish:
+
+```fish
+ln -s ~/.config/omarchy/themes/biovirus/terminal/kitty-tint.fish ~/.config/fish/conf.d/biovirus-tint.fish
+```
+
+`KITTY_TINT_PCT` sets the strength (`export KITTY_TINT_PCT=18`, or
+`set -U KITTY_TINT_PCT 18` in fish); `0` turns it off. The
+[animated version](https://github.com/TierTek/omarchy-biovirus) installs this
+for you with `--hud`.
 
 ## Note on `neovim.lua` and `vscode.json`
 
