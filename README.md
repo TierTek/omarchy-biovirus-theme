@@ -26,7 +26,7 @@ the plates with `omarchy theme bg next`.
 | `shell.*.toml` | Lock, launcher, menu and notification styling for the Omarchy shell. |
 | `icons.theme` | Icon theme name. |
 | `unlock.png`, `preview*.png` | Lock-screen mark and gallery previews. |
-| `neovim.lua`, `vscode.json` | Editor colourschemes. See the note below. |
+| `neovim.lua.example`, `vscode.json.example` | Hand-written editor colourschemes, kept as reference. See the note below. |
 | `terminal/kitty-tint.*` | Optional random background tint per kitty window. See below. |
 
 `tools/make-plates.py` is the generator for the plates (Pillow only). Pass it
@@ -61,17 +61,23 @@ ln -s ~/.config/omarchy/themes/biovirus/terminal/kitty-tint.fish ~/.config/fish/
 [animated version](https://github.com/TierTek/omarchy-biovirus) installs this
 for you with `--hud`.
 
-## Note on `neovim.lua` and `vscode.json`
+## Note on the `.example` editor files
 
 Omarchy 4 does not run code from a theme installed by `omarchy theme install`:
 `*.lua`, the terminal configs and `vscode.json` are dropped from a cloned theme
 and regenerated from `colors.toml`. You lose nothing visible — the generated
-files use the same palette — but if you want the hand-written versions, copy
-the theme by hand instead:
+files use the same palette — so the hand-written Neovim and VS Code configs
+ship as `neovim.lua.example` and `vscode.json.example`, which Omarchy keeps but
+never loads.
+
+If you want them instead of the generated ones, copy the theme by hand (a
+theme in `~/.config/omarchy/themes` is not filtered) and drop the suffix:
 
 ```bash
 git clone https://github.com/TierTek/omarchy-biovirus-theme /tmp/biovirus
 rm -rf /tmp/biovirus/.git
+mv /tmp/biovirus/neovim.lua.example /tmp/biovirus/neovim.lua
+mv /tmp/biovirus/vscode.json.example /tmp/biovirus/vscode.json
 cp -r /tmp/biovirus ~/.config/omarchy/themes/biovirus
 omarchy theme set biovirus
 ```
